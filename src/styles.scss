@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.formContainer {
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    .formWrapper {
+        background-color: #121212;
+        padding: 20px 60px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        
+        .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .title {
+            color: whitesmoke;
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            input {
+                padding: 10px;
+                border: none;
+                width: 250px;
+                border-bottom: 1px solid whitesmoke;
+                background-color: #121212;
+                color: white;
+            }
+
+            button {
+                background-color: #007AFF;
+                color: white;
+                padding: 10px;
+                font-weight: bold;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #757575;
+                font-size: 14px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                cursor: pointer;
+
+                img {
+                    width: 32px;
+                }
+            }
+        }
+
+        p {
+            color: #757575;
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 10px;
+        }
+    }
+}
