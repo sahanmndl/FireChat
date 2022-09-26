@@ -80,3 +80,65 @@
         }
     }
 }
+
+.home {
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        border-radius: 10px;
+        width: 70%;
+        height: 80%;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .sidebar {
+        flex: 1;
+        background-color: #121212;
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            padding: 10px;
+            justify-content: space-between;
+            color: whitesmoke;
+
+            .logo {
+                font-weight: bold;
+            }
+
+            .user {
+                display: flex;
+                gap: 10px;
+            }
+
+            img {
+                height: 24px;
+                width: 24px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            button {
+                background-color: #CF6679;
+                color: whitesmoke;
+                font-size: 10px;
+                cursor: pointer;
+                border: none;
+                &:hover { 
+                    background: red; 
+                }
+            }
+        }
+    }
+
+    .chatwindow {
+        flex: 3;
+        color: white;
+    }
+}
