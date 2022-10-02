@@ -3,13 +3,28 @@
     margin: 0;
 }
 
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
 .formContainer {
     background-color: black;
     display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
-
     .formWrapper {
         background-color: #121212;
         padding: 20px 60px;
@@ -18,25 +33,21 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
-        
         .logo {
             color: white;
             font-size: 28px;
             font-weight: bold;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         .title {
             color: whitesmoke;
             font-size: 14px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         form {
             display: flex;
             flex-direction: column;
             gap: 15px;
-
             input {
                 padding: 10px;
                 border: none;
@@ -45,7 +56,6 @@
                 background-color: #121212;
                 color: white;
             }
-
             button {
                 background-color: #007AFF;
                 color: white;
@@ -56,7 +66,6 @@
                 border-radius: 4px;
                 cursor: pointer;
             }
-
             label {
                 display: flex;
                 align-items: center;
@@ -71,7 +80,6 @@
                 }
             }
         }
-
         p {
             color: #757575;
             font-size: 14px;
@@ -87,7 +95,6 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-
     .container {
         border-radius: 10px;
         width: 70%;
@@ -95,11 +102,9 @@
         display: flex;
         overflow: hidden;
     }
-
     .sidebar {
         flex: 1;
         background-color: #121212;
-
         .navbar {
             display: flex;
             align-items: center;
@@ -107,23 +112,19 @@
             padding: 10px;
             justify-content: space-between;
             color: whitesmoke;
-
             .logo {
                 font-weight: bold;
             }
-
             .user {
                 display: flex;
                 gap: 10px;
             }
-
             img {
                 height: 24px;
                 width: 24px;
                 border-radius: 50%;
                 object-fit: cover;
             }
-
             button {
                 background-color: #CF6679;
                 color: whitesmoke;
@@ -135,10 +136,143 @@
                 }
             }
         }
-    }
+        .searchBar {
+            border-bottom: 1px solid #757575;
 
+            .searchForm {
+
+                input {
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    color: white;
+                }
+            }
+        }
+        .userChatList {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            cursor: pointer;
+            &:hover {
+                background-color: black;
+            }
+            img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .userChatItem {
+                span{
+                    font-size: 18px;
+                    font-weight: normal;
+                }
+                p {
+                    font-size: 14px;
+                    color: lightgray;
+                }
+            }
+        }
+    }
     .chatwindow {
         flex: 3;
         color: white;
+        .chatInfo {
+            height: 50px;
+            background-color: #0f0f0f;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            color: lightgray;
+        }
+        .messages {
+            background-color: black;
+            padding: 10px;
+            height: calc(100% - 160px);
+            overflow: scroll;
+            .message {
+                display: flex;
+                gap: 20px;
+                margin-bottom: 20px;
+                .messageInfo {
+                    display: flex;
+                    flex-direction: column;
+                    color: gray;
+                    font-weight: 300;
+    
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+                .messageContent {
+                    max-width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    p {
+                        background-color: #171717;
+                        padding: 10px 20px;
+                        border-radius: 0px 10px 10px 10px;
+                        max-width: max-content;
+                    }
+                    img {
+                        width: 50%;
+                    }
+                }
+                &.owner {
+                    flex-direction: row-reverse;
+                    .messageContent {
+                        align-items: flex-end;
+                        p {
+                            background-color: #007AFF;
+                            color: white;
+                            border-radius: 10px 0px 10px 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .input {
+            height: 50px;
+            background-color: #0f0f0f;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            input {
+                width: 100%;
+                border: none;
+                outline: none;
+                color: white;
+                font-size: 18px;
+                background-color: #0f0f0f;
+                &::placeholder {
+                    color: #757575;
+                }
+            }
+            .send {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                img {
+                    height: 24px;
+                    cursor: pointer;
+                }
+                button {
+                    border: none;
+                    padding: 10px 15px;
+                    color: white;
+                    background-color: #007AFF;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
