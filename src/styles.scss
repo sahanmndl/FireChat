@@ -19,6 +19,19 @@
     }
 }
 
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .ripple:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+  }
+
 .formContainer {
     background-color: black;
     display: flex;
@@ -47,12 +60,12 @@
         form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 16px;
             input {
                 padding: 10px;
                 border: none;
                 width: 250px;
-                border-bottom: 1px solid whitesmoke;
+                border-bottom: 1px solid #757575;
                 background-color: #121212;
                 color: white;
             }
@@ -65,6 +78,14 @@
                 border: none;
                 border-radius: 4px;
                 cursor: pointer;
+                &:hover { 
+                    background: #1DA1F2; 
+                }
+                &:disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
+                }
+                
             }
             label {
                 display: flex;
@@ -74,7 +95,9 @@
                 font-size: 14px;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 cursor: pointer;
-
+                &:hover { 
+                    color: white; 
+                }
                 img {
                     width: 32px;
                 }
