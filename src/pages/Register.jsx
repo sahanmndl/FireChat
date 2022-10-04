@@ -7,9 +7,11 @@ import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { LoadingButton } from "@mui/lab";
 import { Alert, LinearProgress } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
 
+    const navigate = useNavigate()
     // const [name, setName] = useState("")
     // const [email, setEmail] = useState("")
     // const [password, setPassword] = useState("")
@@ -45,6 +47,7 @@ const Register = () => {
                             photoURL: downloadURL
                         })
                         await setDoc(doc(db, "userChats", response.user.uid), {})
+                        navigate("/")
                     } catch (err) {
                         console.log(err)
                         setError(true)
