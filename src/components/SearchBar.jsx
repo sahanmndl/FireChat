@@ -2,6 +2,7 @@ import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, updat
 import React, { useContext, useState } from "react";
 import { db } from "../firebase";
 import { AuthContext } from "../context/AuthContext";
+import { TextField } from "@mui/material";
 
 const SearchBar = () => {
 
@@ -67,15 +68,25 @@ const SearchBar = () => {
     return (
         <div className="searchBar">
             <div className="searchForm">
-                <input type="text" placeholder="Search Users..." onKeyDown={handleKeyDown} value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
+                <TextField
+                    InputLabelProps={{style: {color: 'gray'} }}
+                    fullWidth
+                    type="text"
+                    label="Search users..." 
+                    variant="standard" 
+                    onKeyDown={handleKeyDown}
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
             </div>
             {user && 
-            <div className="userChatList" onClick={handleSelectChat}>
-                <img src={user.photoURL} alt="" />
-                <div className="userChatItem">
-                    <span>{user.displayName}</span>
+                <div className="userChatList" onClick={handleSelectChat}>
+                    <img src={user.photoURL} alt="" />
+                    <div className="userChatItem">
+                        <span>{user.displayName}</span>
+                    </div>
                 </div>
-            </div>}
+            }
             {error && <span>User not found!</span>}
         </div>
     )
