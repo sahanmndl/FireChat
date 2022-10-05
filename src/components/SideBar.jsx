@@ -1,4 +1,5 @@
 import React from "react";
+import Chats from "./Chats";
 import NavBar from "./NavBar";
 import SearchBar from "./SearchBar";
 import UserChatItem from "./UserChatItem";
@@ -8,7 +9,7 @@ const SideBar = () => {
         <div className="sidebar">
             <NavBar />
             <SearchBar />
-            <UserChatItem />
+            <Chats />
         </div>
     )
 }

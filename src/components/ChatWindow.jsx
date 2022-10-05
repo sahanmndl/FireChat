@@ -8,7 +8,6 @@ const ChatWindow = () => {
             <div className="chatInfo">
                 <span>Sahan</span>
             </div>
-            <Chats />
             <TextInputBar />
         </div>
     )
