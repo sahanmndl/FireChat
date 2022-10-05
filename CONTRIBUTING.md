@@ -2,7 +2,7 @@
 
 - Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
 - Clone your fork down to your local machine
-- `git clone https://github.com/your-username/hacktoberfest.git`
+- `git clone https://github.com/your-username/firechat.git`
 - Create a branch
 - `git checkout -b branch-name`
 - Make your changes (choose from any task below)
