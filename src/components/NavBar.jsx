@@ -3,6 +3,7 @@ import userPic from "../assets/user.png";
 import {signOut} from "firebase/auth";
 import { auth } from "../firebase";
 import { AuthContext } from "../context/AuthContext";
+import { Button } from "@mui/material";
 
 const NavBar = () => {
 
@@ -12,11 +13,9 @@ const NavBar = () => {
 
     return (
         <div className="navbar">
-            <span className="logo">Sahan</span>
             <div className="user">
                 <img src={currentUser.photoURL} alt="" />
                 <span>{currentUser.displayName}</span>
-                <button onClick={() => signOut(auth)}>Logout</button>
             </div>
         </div>
     )
