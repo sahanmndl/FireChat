@@ -107,10 +107,11 @@
     justify-content: center;
     .container {
         border-radius: 10px;
-        width: 70%;
+        width: 75%;
         height: 80%;
         display: flex;
         overflow: hidden;
+        box-shadow: 0 0 4px #757575;
     }
     .sidebar {
         flex: 1;
@@ -122,12 +123,11 @@
             padding: 10px;
             justify-content: space-between;
             color: whitesmoke;
-            .logo {
-                font-weight: bold;
-            }
             .user {
                 display: flex;
                 gap: 10px;
+                font-size: 14px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
             img {
                 height: 24px;
@@ -136,21 +136,16 @@
                 object-fit: cover;
             }
             button {
-                background-color: #CF6679;
                 color: whitesmoke;
                 font-size: 10px;
-                cursor: pointer;
+                height: 24px;
                 border: none;
-                &:hover { 
-                    background: red; 
-                }
+                cursor: pointer;
             }
         }
         .searchBar {
             border-bottom: 1px solid #757575;
-
             .searchForm {
-
                 input {
                     background-color: transparent;
                     border: none;
@@ -177,11 +172,13 @@
             }
             .userChatItem {
                 span{
-                    font-size: 18px;
+                    font-size: 16px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     font-weight: normal;
                 }
                 p {
                     font-size: 14px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     color: lightgray;
                 }
             }
@@ -199,6 +196,14 @@
             padding: 10px;
             color: lightgray;
         }
+        .rightContainer {
+            display: flex;
+            gap: 10px;
+            button {
+                height: 30px;
+                font-size: 12px;
+            }
+        }
         .messages {
             background-color: black;
             padding: 10px;
@@ -213,7 +218,6 @@
                     flex-direction: column;
                     color: gray;
                     font-weight: 300;
-    
                     img {
                         width: 40px;
                         height: 40px;
