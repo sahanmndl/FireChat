@@ -3,13 +3,11 @@ Chat application using React JS and Firebase
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-~ Create a new project in Firebase
-
-~ Create a new web app inside that project
-
-~ Copy and paste those firebase keys in firebase.js inside src folder
-
-~ Initialize Firebase Authentication, Firestore and Storage
+### Firebase Setup
+- Create a new project in Firebase
+- Create a new web app inside that project
+- Copy and paste those firebase keys in firebase.js inside src folder
+- Initialize Firebase Authentication, Firestore and Storage
 
 ## Available Scripts
 
