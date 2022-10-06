@@ -40,7 +40,7 @@ const Chats = () => {
                     onClick={() => handleChatSelection(chat[1].userInfo)}
                 >
                     <img src={chat[1].userInfo.photoURL} alt="" />
-                    <div className="userChatInfo">
+                    <div className="userChatItem">
                         <span>{chat[1].userInfo.displayName}</span>
                         <p>{chat[1].lastMessage?.text}</p>
                     </div>

@@ -12,8 +12,13 @@ const ChatWindow = () => {
 
     return (
         <div className="chatwindow">
-            <div className="chatInfo">
-                <span>{data.user?.displayName}</span>
+            <div className="topBar">
+                <div className="receiverDetails">
+                    <img src={data.user?.photoURL} alt="" />
+                    <div className="receiverName">
+                        <span>{data.user?.displayName}</span>
+                    </div>
+                </div>
                 <div className="rightContainer">
                     <Button
                         variant="outlined"
