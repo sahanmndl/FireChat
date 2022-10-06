@@ -69,7 +69,8 @@ const SearchBar = () => {
         <div className="searchBar">
             <div className="searchForm">
                 <TextField
-                    InputLabelProps={{style: {color: 'gray'} }}
+                    InputLabelProps={{style: {color: 'gray', fontSize: 16} }}
+                    inputProps={{style: {fontSize: 16}}}
                     fullWidth
                     type="text"
                     label="Search users..." 

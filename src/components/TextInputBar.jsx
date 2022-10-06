@@ -1,12 +1,13 @@
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import React, { useContext, useState } from "react";
-import addImage from "../assets/add-image.png";
-import attach from "../assets/attach.png";
+import addPic from "../assets/addPic.png";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
 import { db, storage } from "../firebase";
 import {v4 as uuid} from "uuid";
 import { arrayUnion, doc, serverTimestamp, Timestamp, updateDoc } from "firebase/firestore";
+import { IconButton } from "@mui/material";
+import SendIcon from '@mui/icons-material/Send';
 
 const TextInputBar = () => {
 
@@ -77,17 +78,20 @@ const TextInputBar = () => {
                 onChange={(e) => setText(e.target.value)}
             />
             <div className="send">
-                <img src={addImage} alt="" />
-                <input 
-                    type="file" 
-                    style={{display: "none"}} 
-                    id="file" 
-                    onChange={(e) => setImg(e.target.files[0])}
-                />
-                <label htmlFor="file">
-                    <img src={attach} alt="" />
-                </label>
-                <button onClick={handleSendMsg}>Send</button>
+                <div className="addImage">
+                    <input 
+                        type="file" 
+                        style={{display: "none"}} 
+                        id="file" 
+                        onChange={(e) => setImg(e.target.files[0])}
+                    />
+                    <label htmlFor="file">
+                        <img src={addPic} alt="" />
+                    </label>
+                </div>
+                <IconButton size="large" onClick={handleSendMsg}>
+                    <SendIcon />
+                </IconButton>
             </div>
         </div>
     )

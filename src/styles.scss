@@ -144,7 +144,6 @@
             }
         }
         .searchBar {
-            border-bottom: 1px solid #757575;
             .searchForm {
                 input {
                     background-color: transparent;
@@ -162,7 +161,7 @@
             color: white;
             cursor: pointer;
             &:hover {
-                background-color: black;
+                background-color: #0f0f0f;
             }
             img {
                 width: 32px;
@@ -172,14 +171,15 @@
             }
             .userChatItem {
                 span{
-                    font-size: 16px;
-                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    font-weight: normal;
-                }
-                p {
                     font-size: 14px;
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    color: lightgray;
+                    font-weight: normal;
+                    color: white;
+                }
+                p {
+                    font-size: 12px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    color: #757575;
                 }
             }
         }
@@ -187,27 +187,45 @@
     .chatwindow {
         flex: 3;
         color: white;
-        .chatInfo {
-            height: 50px;
+        .topBar {
+            height: 40px;
             background-color: #0f0f0f;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 10px;
-            color: lightgray;
-        }
-        .rightContainer {
-            display: flex;
-            gap: 10px;
-            button {
-                height: 30px;
-                font-size: 12px;
+            .receiverDetails {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .receiverName {
+                    span{
+                        font-size: 16px;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        font-weight: normal;
+                        color: white;
+                    }
+                }
+            }
+            .rightContainer {
+                display: flex;
+                gap: 10px;
+                button {
+                    height: 30px;
+                    font-size: 12px;
+                }
             }
         }
         .messages {
             background-color: black;
             padding: 10px;
-            height: calc(100% - 160px);
+            height: calc(100% - 138px);
             overflow: scroll;
             .message {
                 display: flex;
@@ -256,7 +274,7 @@
         .input {
             height: 50px;
             background-color: #0f0f0f;
-            padding: 10px;
+            padding: 4px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -265,7 +283,8 @@
                 border: none;
                 outline: none;
                 color: white;
-                font-size: 18px;
+                font-size: 16px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 background-color: #0f0f0f;
                 &::placeholder {
                     color: #757575;
@@ -275,16 +294,21 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                img {
-                    height: 24px;
-                    cursor: pointer;
+                margin-left: 10px;
+                .addImage {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        height: 24px;
+                        cursor: pointer;
+                    }
                 }
                 button {
-                    border: none;
-                    padding: 10px 15px;
-                    color: white;
-                    background-color: #007AFF;
+                    color: #007AFF;
                     cursor: pointer;
+                    &:disabled {
+                        color: #757575;
+                    }
                 }
             }
         }
